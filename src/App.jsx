@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar'
 
 function App() {
   const [notes, setNotes] = useState([]);
+  const [activeNote, setActiveNote] =useState(false);
 
   const onAddNote = () => {
     console.log('called');
@@ -27,7 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar onAddNote={onAddNote} notes={notes} onDeleteNote={onDeleteNote}/>
+      <Sidebar
+        onAddNote={onAddNote}
+        notes={notes}
+        onDeleteNote={onDeleteNote}
+        activeNote={activeNote}
+        setActiveNote={setActiveNote}
+      />
       <Main />
     </div>
   )
