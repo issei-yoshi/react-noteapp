@@ -9,6 +9,14 @@ function App() {
 
   const onAddNote = () => {
     console.log('called');
+    const newNote = {
+      id: 1,
+      title: "new note",
+      content: "new content",
+      modDate: Date.now(),
+    };
+    setNotes([...notes, newNote]);
+    console.log(notes);
   };
 
   return (
