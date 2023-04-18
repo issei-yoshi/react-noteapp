@@ -3,7 +3,7 @@ import "./Main.css";
 
 const Main = ({ activeNote }) => {
   if (!activeNote) {
-    return <div>Not chosen note</div>
+    return <div className='no-active-note'>Not chosen note</div>
   }
 
   return (
