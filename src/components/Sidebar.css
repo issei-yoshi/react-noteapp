@@ -1,11 +1,15 @@
 button {
   background: none;
   border: none;
-  color: #08c;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: inherit;
   cursor: pointer;
+  color: #08c;
+}
+
+button:hover {
+  color: #04c;
 }
 
 .app-sidebar {
@@ -35,6 +39,11 @@ button {
   transition: all 0.3s;
 }
 
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+}
+
 .app-sidebar-note p {
   margin: 10px 0;
 }
@@ -44,5 +53,11 @@ button {
 }
 
 .app-sidebar-note:hover {
-  background-color: #f1f0f0;
+  background: #f1f0f0;
+}
+
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: #af7daa;
+  color: white;
 }
