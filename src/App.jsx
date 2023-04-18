@@ -4,9 +4,13 @@ import Sidebar from './components/Sidebar'
 
 function App() {
 
+  const onAddNote = () => {
+    console.log('called');
+  };
+
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar onAddNote={onAddNote} />
       <Main />
     </div>
   )
