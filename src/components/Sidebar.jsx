@@ -16,7 +16,10 @@ function Sidebar({ onAddNote, notes }) {
               <button>Delete</button>
             </div>
             <p>{note.content}</p>
-            <small>{note.modDate}</small>
+            <small>{new Date(note.modDate).toLocaleDateString("ja-JP", {
+              hour: "2-digit",
+              minute: "2-digit"
+            })}</small>
           </div>
         ))}
       </div>
