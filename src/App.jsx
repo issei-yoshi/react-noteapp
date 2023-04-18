@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import uuid from 'react-uuid';
 
 import './App.css'
 import Main from './components/Main'
@@ -10,7 +11,7 @@ function App() {
   const onAddNote = () => {
     console.log('called');
     const newNote = {
-      id: 1,
+      id: uuid(),
       title: "new note",
       content: "new content",
       modDate: Date.now(),

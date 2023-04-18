@@ -10,7 +10,7 @@ function Sidebar({ onAddNote, notes }) {
       </div>
       <div className='app-sidebar-notes'>
         {notes.map((note) => (
-          <div className='app-sidebar-note'>
+          <div className='app-sidebar-note' key={note.id}>
             <div className='sidebar-note-title'>
               <strong>{note.title}</strong>
               <button>Delete</button>
