@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Sidebar.css";
 
-function Sidebar({ onAddNote }) {
+function Sidebar({ onAddNote, notes }) {
   return (
     <div className='app-sidebar'>
       <div className='app-sidebar-header'>
@@ -9,14 +9,16 @@ function Sidebar({ onAddNote }) {
         <button onClick={onAddNote}>Add</button>
       </div>
       <div className='app-sidebar-notes'>
-        <div className='app-sidebar-note'>
-          <div className='sidebar-note-title'>
-            <strong>Title</strong>
-            <button>Delete</button>
+        {notes.map((note) => (
+          <div className='app-sidebar-note'>
+            <div className='sidebar-note-title'>
+              <strong>{note.title}</strong>
+              <button>Delete</button>
+            </div>
+            <p>{note.content}</p>
+            <small>{note.modDate}</small>
           </div>
-          <p>content</p>
-          <small>Upadated: xx/xx</small>
-        </div>
+        ))}
       </div>
     </div>
   );
