@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Main.css";
 
-const Main = ({ activeNote }) => {
+const Main = ({ activeNote, onUpdateNote }) => {
   const onEditNote = () => {
   }
 
