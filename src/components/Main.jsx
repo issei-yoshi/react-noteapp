@@ -2,7 +2,12 @@ import React from 'react';
 import "./Main.css";
 
 const Main = ({ activeNote, onUpdateNote }) => {
-  const onEditNote = () => {
+  const onEditNote = (key, value) => {
+    onUpdateNote({
+      ...activeNote,
+      [key]: value,
+      modDate: Date.now(),
+    });
   }
 
   if (!activeNote) {
