@@ -30,8 +30,17 @@ function App() {
     return notes.find((note) => note.id === activeNote);
   };
 
-  const onUpdateNote = () => {
+  const onUpdateNote = (updatedNote) => {
     //修正された新しいノートの配列を返す
+    const updatedNotesArray = notes.map((note) => {
+      if(note.id === updatedNote.id) {
+        return updatedNote;
+      } else {
+        return note;
+      }
+    });
+
+    setNotes(updatedNotesArray)
   };
 
   return (
