@@ -30,6 +30,10 @@ function App() {
     return notes.find((note) => note.id === activeNote);
   };
 
+  const onUpdateNote = () => {
+    //修正された新しいノートの配列を返す
+  };
+
   return (
     <div className="App">
       <Sidebar

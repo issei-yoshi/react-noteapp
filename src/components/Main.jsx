@@ -2,6 +2,9 @@ import React from 'react';
 import "./Main.css";
 
 const Main = ({ activeNote }) => {
+  const onEditNote = () => {
+  }
+
   if (!activeNote) {
     return <div className='no-active-note'>Not chosen note</div>
   }
